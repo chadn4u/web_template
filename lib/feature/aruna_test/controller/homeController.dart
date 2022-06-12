@@ -6,61 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get_rx/get_rx.dart';
 
 class HomeController extends BaseController {
-  final listPosts = <Posts>[].obs;
-
-  final tempPosts = <Posts>[].obs;
-
-  final ScrollController scrollController = ScrollController();
-
-  final TextEditingController textEditingController = TextEditingController();
+  late RxString titleSelected = "".obs;
 
   @override
   void onInit() {
     super.onInit();
-    loadData();
-  }
-
-  onChangeText(String text) {
-    if (text.isNotEmpty) {
-      List<Posts> temp = tempPosts
-          .where((p0) => p0.title.toLowerCase().contains(text.toLowerCase()))
-          .toList();
-      // print("$text");
-      listPosts.clear();
-      listPosts.addAll(temp);
-    } else {
-      listPosts.clear();
-      listPosts.addAll(tempPosts);
-    }
-  }
-
-  loadData() async {
-    try {
-      final result = await restClient.request("", Method.GET, {});
-
-      if (result != null) {
-        if (result is Response) {
-          var data = PostList.fromJson(result.data);
-
-          listPosts.addAll(data.postList);
-          tempPosts.addAll(data.postList);
-          //   if (data != null) {
-          //     listPosts.addAll(data);
-          //     isToLoadMore = true;
-          //     change(donors, status: RxStatus.success());
-          //   } else {
-          //     isToLoadMore = false;
-          //   }
-          // }
-        }
-      } else {
-        // isToLoadMore = false;
-      }
-    } on Exception catch (e) {
-      // Get.showSnackbar(GetBar(
-      //   message: "$e",
-      //   duration: Duration(milliseconds: 3000),
-      // ));
-    }
   }
 }

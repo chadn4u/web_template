@@ -5,7 +5,6 @@ import 'package:web_template/feature/aruna_test/controller/homeController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../model/control.dart';
 import '../../model/widgetCategory.dart';
 import '../widgets/animateOpacityWidgets.dart';
 
@@ -19,32 +18,214 @@ class HomePage extends GetView<HomeController> {
     bool isHoveringPubDevButton = false;
     late double _cardWidth = (MediaQuery.of(context).size.width * 0.9) / 3;
     WidgetCategory category;
-    Map<String, dynamic> data = {
-      "categoryName": "Signature Pad",
-      "mobileCategoryId": 7,
-      "webCategoryId": 7,
-      "controlList": [
-        {
-          "title": "Signature Pad",
-          "description":
-              "Captures the signature and save it as an image to sync across devices and documents",
-          "image": "assets/SignaturePad.png",
-          "displayType": "tab",
-          "controlId": 1,
-          "subItems": [
-            {
-              "type": "sample",
-              "title": "Getting Started",
-              "key": "signature_pad_getting_started",
-              "codeLink":
-                  "https://github.com/syncfusion/flutter-examples/blob/master/lib/samples/signature_pad/getting_started/signature_pad_getting_started.dart",
-              "needsPropertyPanel": true
-            }
-          ]
-        }
-      ]
-    };
-    category = WidgetCategory.fromJson(data);
+    List<Map<String, dynamic>> data = [
+      {
+        "title": "Signature Pad",
+        "child": [
+          {"titleChild": "Signature Pad", "onSelect": true, "subItems": []}
+        ]
+      },
+      {
+        "title": "Camel",
+        "child": [
+          {
+            "titleChild": "Camel Mint",
+            "onSelect": false,
+            "subItems": [
+              {
+                "titleItem": "Camel Purple Mint",
+              }
+            ]
+          }
+        ]
+      },
+      {"title": "Camel Yellow", "child": null},
+      {"title": "Camel White", "child": null},
+      {
+        "title": "Marlboro",
+        "child": [
+          {"titleChild": "Marlboro White", "onSelect": false, "subItems": []},
+          {"titleChild": "Marlboro Red", "onSelect": false, "subItems": []},
+          {
+            "titleChild": "Marlboro Ice Blast",
+            "onSelect": false,
+            "subItems": null
+          },
+        ]
+      },
+      {
+        "title": "Signature Pad",
+        "child": [
+          {"titleChild": "Signature Pad", "onSelect": true, "subItems": []}
+        ]
+      },
+      {
+        "title": "Camel",
+        "child": [
+          {
+            "titleChild": "Camel Mint",
+            "onSelect": false,
+            "subItems": [
+              {
+                "titleItem": "Camel Purple Mint",
+              }
+            ]
+          }
+        ]
+      },
+      {"title": "Camel Yellow", "child": null},
+      {"title": "Camel White", "child": null},
+      {
+        "title": "Marlboro",
+        "child": [
+          {"titleChild": "Marlboro White", "onSelect": false, "subItems": []},
+          {"titleChild": "Marlboro Red", "onSelect": false, "subItems": []},
+          {
+            "titleChild": "Marlboro Ice Blast",
+            "onSelect": false,
+            "subItems": null
+          },
+        ]
+      },
+      {
+        "title": "Signature Pad",
+        "child": [
+          {"titleChild": "Signature Pad", "onSelect": true, "subItems": []}
+        ]
+      },
+      {
+        "title": "Camel",
+        "child": [
+          {
+            "titleChild": "Camel Mint",
+            "onSelect": false,
+            "subItems": [
+              {
+                "titleItem": "Camel Purple Mint",
+              }
+            ]
+          }
+        ]
+      },
+      {"title": "Camel Yellow", "child": null},
+      {"title": "Camel White", "child": null},
+      {
+        "title": "Marlboro",
+        "child": [
+          {"titleChild": "Marlboro White", "onSelect": false, "subItems": []},
+          {"titleChild": "Marlboro Red", "onSelect": false, "subItems": []},
+          {
+            "titleChild": "Marlboro Ice Blast",
+            "onSelect": false,
+            "subItems": null
+          },
+        ]
+      },
+      {
+        "title": "Signature Pad",
+        "child": [
+          {"titleChild": "Signature Pad", "onSelect": true, "subItems": []}
+        ]
+      },
+      {
+        "title": "Camel",
+        "child": [
+          {
+            "titleChild": "Camel Mint",
+            "onSelect": false,
+            "subItems": [
+              {
+                "titleItem": "Camel Purple Mint",
+              }
+            ]
+          }
+        ]
+      },
+      {"title": "Camel Yellow", "child": null},
+      {"title": "Camel White", "child": null},
+      {
+        "title": "Marlboro",
+        "child": [
+          {"titleChild": "Marlboro White", "onSelect": false, "subItems": []},
+          {"titleChild": "Marlboro Red", "onSelect": false, "subItems": []},
+          {
+            "titleChild": "Marlboro Ice Blast",
+            "onSelect": false,
+            "subItems": null
+          },
+        ]
+      },
+      {
+        "title": "Signature Pad",
+        "child": [
+          {"titleChild": "Signature Pad", "onSelect": true, "subItems": []}
+        ]
+      },
+      {
+        "title": "Camel",
+        "child": [
+          {
+            "titleChild": "Camel Mint",
+            "onSelect": false,
+            "subItems": [
+              {
+                "titleItem": "Camel Purple Mint",
+              }
+            ]
+          }
+        ]
+      },
+      {"title": "Camel Yellow", "child": null},
+      {"title": "Camel White", "child": null},
+      {
+        "title": "Marlboro",
+        "child": [
+          {"titleChild": "Marlboro White", "onSelect": false, "subItems": []},
+          {"titleChild": "Marlboro Red", "onSelect": false, "subItems": []},
+          {
+            "titleChild": "Marlboro Ice Blast",
+            "onSelect": false,
+            "subItems": null
+          },
+        ]
+      },
+      {
+        "title": "Signature Pad",
+        "child": [
+          {"titleChild": "Signature Pad", "onSelect": true, "subItems": []}
+        ]
+      },
+      {
+        "title": "Camel",
+        "child": [
+          {
+            "titleChild": "Camel Mint",
+            "onSelect": false,
+            "subItems": [
+              {
+                "titleItem": "Camel Purple Mint",
+              }
+            ]
+          }
+        ]
+      },
+      {"title": "Camel Yellow", "child": null},
+      {"title": "Camel White", "child": null},
+      {
+        "title": "Marlboro",
+        "child": [
+          {"titleChild": "Marlboro White", "onSelect": false, "subItems": []},
+          {"titleChild": "Marlboro Red", "onSelect": false, "subItems": []},
+          {
+            "titleChild": "Marlboro Ice Blast",
+            "onSelect": false,
+            "subItems": null
+          },
+        ]
+      },
+    ];
+    // category = WidgetCategory.fromJson(data);
+    print(MediaQuery.of(context).size.width);
     return Scaffold(
         appBar: isMobile
             ? PreferredSize(
@@ -223,7 +404,7 @@ class HomePage extends GetView<HomeController> {
                         )),
                   ],
                 )),
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: Colors.white,
         body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
@@ -232,20 +413,25 @@ class HomePage extends GetView<HomeController> {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width * 0.2,
-                color: Colors.white,
+                color: Colors.grey.shade200,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Padding(
-                        padding: EdgeInsets.fromLTRB(24, 10, 0, 0),
+                        padding: EdgeInsets.fromLTRB(24, 10, 0, 10),
                         child: Text('Menu',
                             style: TextStyle(
                                 color: Colors.green,
                                 fontSize: 18,
                                 letterSpacing: 0.53,
                                 fontFamily: 'Roboto-Bold'))),
-                    _getCategoryWidget(
-                        category, MediaQuery.of(context).size.width)
+                    Expanded(
+                      child: ListView.builder(
+                        itemBuilder: (context, index) =>
+                            _getCategoryWidget(data[index], context),
+                        itemCount: data.length,
+                      ),
+                    )
                   ],
                 ),
               )
@@ -255,141 +441,107 @@ class HomePage extends GetView<HomeController> {
   }
 
   /// get the rounded corner layout for given category
-  Widget _getCategoryWidget(WidgetCategory category, double _cardWidth) {
-    return Container(
-        padding: const EdgeInsets.only(bottom: 10),
-        decoration: BoxDecoration(
-            color: Colors.yellow,
-            border: Border.all(
-                color: const Color.fromRGBO(0, 0, 0, 0.12), width: 1.1),
-            borderRadius: const BorderRadius.all(Radius.circular(12))),
-        width: _cardWidth,
-        child: Column(children: <Widget>[
-          Container(
-            padding: const EdgeInsets.only(top: 15, bottom: 2),
-            child: Text(
-              category.categoryName!.toUpperCase(),
-              style: TextStyle(
-                  color: Colors.amber, fontSize: 16, fontFamily: 'Roboto-Bold'),
-            ),
-          ),
-          Divider(
-            color: const Color.fromRGBO(238, 238, 238, 1),
-            thickness: 1,
-          ),
-          Column(children: _getControlListView(category))
-        ]));
-  }
+  Widget _getCategoryWidget(Map<String, dynamic> data, BuildContext ctx) {
+    List<Map<String, dynamic>> dataChild = [];
 
-  /// get the list view of the controls in the specified category.
-  List<Widget> _getControlListView(WidgetCategory category) {
-    final List<Widget> items = <Widget>[];
-    for (int i = 0; i < category.controlList!.length; i++) {
-      final Control control = Control.fromJson(category.controlList![i]);
-      String? status = control.status;
-      if (control.title == 'PDF Viewer') {
-        status = 'New';
-      }
-
-      items.add(
-        Container(
-            color: Colors.blue,
-            child: Material(
-              color: Colors.blue,
-              child: InkWell(
-                splashFactory: InkRipple.splashFactory,
-                hoverColor: Colors.grey.withOpacity(0.2),
-                onTap: () {
-                  // !model.isWebFullView
-                  //     ? onTapControlInMobile(context, model, category, i)
-                  //     : onTapControlInWeb(context, model, category, i);
-                  // model.searchResults.clear();
-                },
-                child: ListTile(
-                    contentPadding: EdgeInsets.fromLTRB(
-                        12, 2, 0, category.controlList!.length > 3 ? 6 : 0),
-                    leading: Image.asset(control.image!, fit: BoxFit.cover),
-                    title: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Row(children: <Widget>[
-                            Text(
-                              control.title!,
-                              textAlign: TextAlign.left,
-                              softWrap: true,
-                              textScaleFactor: 1,
-                              overflow: TextOverflow.fade,
-                              style: const TextStyle(
-                                  fontSize: 12,
-                                  letterSpacing: 0.1,
-                                  color: Colors.white,
-                                  fontFamily: 'Roboto-Bold'),
-                            ),
-                            if (1 != 2)
-                              Container()
-                            else
-                              (control.isBeta ?? false)
-                                  ? Padding(
-                                      padding: const EdgeInsets.only(left: 8),
-                                      child: Container(
-                                          alignment: Alignment.center,
-                                          padding: const EdgeInsets.fromLTRB(
-                                              3, 1.5, 3, 5.5),
-                                          decoration: const BoxDecoration(
-                                              color: Color.fromRGBO(
-                                                  245, 188, 14, 1)),
-                                          child: const Text(
-                                            'BETA',
-                                            style: TextStyle(
-                                                fontSize: 10,
-                                                fontWeight: FontWeight.w500,
-                                                letterSpacing: 0.12,
-                                                fontFamily: 'Roboto-Medium',
-                                                color: Colors.black),
-                                          )))
-                                  : Container()
-                          ]),
-                          if (status != null)
-                            Container(
-                                decoration: BoxDecoration(
-                                    color: status.toLowerCase() == 'new'
-                                        ? const Color.fromRGBO(55, 153, 30, 1)
-                                        : status.toLowerCase() == 'updated'
-                                            ? const Color.fromRGBO(
-                                                246, 117, 0, 1)
-                                            : Colors.transparent,
-                                    borderRadius: const BorderRadius.only(
-                                        topLeft: Radius.circular(10),
-                                        bottomLeft: Radius.circular(10))),
-                                padding:
-                                    const EdgeInsets.fromLTRB(6, 1.5, 4, 5.5),
-                                child: Text(status,
-                                    style: const TextStyle(
-                                        fontFamily: 'Roboto-Medium',
-                                        color: Colors.white,
-                                        fontSize: 10.5)))
-                          else
-                            Container()
-                        ]),
-                    subtitle: Padding(
-                      padding: const EdgeInsets.fromLTRB(0.0, 7.0, 12.0, 0.0),
-                      child: Text(
-                        control.description!,
-                        textAlign: TextAlign.left,
-                        softWrap: true,
-                        textScaleFactor: 1,
-                        overflow: TextOverflow.fade,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 12,
-                          color: Color.fromRGBO(128, 128, 128, 1),
-                        ),
-                      ),
-                    )),
-              ),
-            )),
-      );
+    if (data["child"] != null) {
+      dataChild.addAll(data["child"]);
     }
-    return items;
+
+    return data["child"] != null
+        ? Theme(
+            data: Theme.of(ctx).copyWith(dividerColor: Colors.transparent),
+            child: ExpansionTile(
+                initiallyExpanded: true,
+                title: Text(data["title"],
+                    style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        letterSpacing: 0.53,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Roboto-Bold')),
+                children: List<Widget>.generate(
+                    dataChild.length,
+                    (index) => Material(
+                          color: Colors.grey.shade200,
+                          child: InkWell(
+                            hoverColor: Colors.grey.withOpacity(0.2),
+                            onTap: () {
+                              controller.titleSelected.value =
+                                  dataChild[index]["titleChild"];
+                            },
+                            child: Container(
+                                color: Colors.transparent,
+                                child: Row(
+                                  children: [
+                                    Obx(
+                                      () => Container(
+                                          width: 5,
+                                          alignment: Alignment.centerLeft,
+                                          padding: const EdgeInsets.fromLTRB(
+                                              1, 10, 10, 10),
+                                          color: controller.titleSelected ==
+                                                  dataChild[index]["titleChild"]
+                                              ? Colors.blue
+                                              : Colors.transparent,
+                                          child: const Opacity(
+                                              opacity: 0.0, child: Text('1'))),
+                                    ),
+                                    Expanded(
+                                        child: Container(
+                                      alignment: Alignment.centerLeft,
+                                      padding: const EdgeInsets.fromLTRB(
+                                          20, 10, 10, 10),
+                                      child: Text(
+                                          dataChild[index]["titleChild"],
+                                          style: const TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 15,
+                                              letterSpacing: 0.53,
+                                              fontFamily: 'Roboto-Bold')),
+                                    ))
+                                  ],
+                                )),
+                          ),
+                        ))),
+          )
+        : Material(
+            color: Colors.grey.shade200,
+            child: InkWell(
+              hoverColor: Colors.grey.withOpacity(0.2),
+              onTap: () {
+                controller.titleSelected.value = data["title"];
+              },
+              child: Container(
+                  color: Colors.transparent,
+                  child: Row(
+                    children: [
+                      Obx(
+                        () => Container(
+                            width: 5,
+                            alignment: Alignment.centerLeft,
+                            padding: const EdgeInsets.fromLTRB(1, 10, 10, 10),
+                            color: controller.titleSelected == data["title"]
+                                ? Colors.blue
+                                : Colors.transparent,
+                            child:
+                                const Opacity(opacity: 0.0, child: Text('1'))),
+                      ),
+                      Expanded(
+                          child: Container(
+                        alignment: Alignment.centerLeft,
+                        padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                        child: Text(data["title"],
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                letterSpacing: 0.53,
+                                fontFamily: 'Roboto-Bold',
+                                fontWeight: FontWeight.bold)),
+                      ))
+                    ],
+                  )),
+            ),
+          );
   }
 }
