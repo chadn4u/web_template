@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:web_template/feature/aruna_test/controller/appBarController.dart';
+import 'package:web_template/feature/web_app/controller/appBarController.dart';
 import 'package:web_template/utils/const.dart';
 
 class AppBarHelper extends GetResponsiveView<AppBarController> {
@@ -19,9 +19,12 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
               controller.controllerHome.scaffoldKey.currentState!.closeDrawer();
             }
           },
-          icon: Icon(Icons.menu)),
-      elevation: 0.0,
-      backgroundColor: Colors.green,
+          icon: const Icon(
+            Icons.menu,
+            color: colorBlack,
+          )),
+      elevation: 2.0,
+      backgroundColor: backgroundColorAppBar,
       title: const Text('Flutter UI Widgets',
           style: TextStyle(
               fontSize: fontSizeTitleAppBar, fontFamily: 'HeeboMedium')),
@@ -30,7 +33,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
           height: 40,
           width: 40,
           child: IconButton(
-            icon: const Icon(Icons.settings, color: colorWhite),
+            icon: const Icon(Icons.settings, color: colorBlack),
             onPressed: () {},
           ),
         ),
@@ -42,7 +45,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
   Widget desktop() {
     return AppBar(
       leading: Container(),
-      elevation: 0.0,
+      elevation: 2.0,
       backgroundColor: backgroundColorAppBar,
       flexibleSpace: Container(
           transform: Matrix4.translationValues(0, 4, 0),
@@ -53,7 +56,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
                 padding: EdgeInsets.fromLTRB(24, 15, 0, 0),
                 child: Text('Template',
                     style: TextStyle(
-                        color: colorWhite,
+                        color: colorBlack,
                         fontSize: fontSizeTitleAppBar,
                         letterSpacing: 0.53,
                         fontFamily: 'Roboto-Bold')),
@@ -162,7 +165,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
               height: 60,
               width: 60,
               child: IconButton(
-                icon: const Icon(Icons.settings, color: colorWhite),
+                icon: const Icon(Icons.settings, color: colorBlack),
                 onPressed: () {
                   // scaffoldKey.currentState!.openEndDrawer();
                 },

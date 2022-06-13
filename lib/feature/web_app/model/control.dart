@@ -1,4 +1,4 @@
-import 'package:web_template/feature/aruna_test/model/subItem.dart';
+import 'package:web_template/feature/web_app/model/subItem.dart';
 
 /// Defines the control class.
 class Control {

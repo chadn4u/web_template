@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:web_template/feature/aruna_test/controller/appBarController.dart';
-import 'package:web_template/feature/aruna_test/controller/menuController.dart';
+import 'package:web_template/feature/web_app/controller/appBarController.dart';
+import 'package:web_template/feature/web_app/controller/menuController.dart';
 
 import '../controller/homeController.dart';
 

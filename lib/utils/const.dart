@@ -8,10 +8,14 @@ const double preferredSizeHeightMobile = 46.0;
 const double preferredSizeHeightWeb = 60.0;
 
 const double fontSizeTitleAppBar = 18;
+const double fontSizeTitleAppBarSmall = 15;
 
+const Color mainColor = Colors.blue;
 const Color backgroundColor = Colors.white;
 const Color transparentColor = Colors.transparent;
 const Color colorWhite = Colors.white;
-const Color backgroundColorAppBar = Colors.green;
+const Color colorBlack = Colors.black;
+const Color backgroundColorMenu = colorWhite;
+const Color backgroundColorAppBar = colorWhite;
 const Color colorHover = colorWhite;
 const Color colorHoveringButton = backgroundColorAppBar;

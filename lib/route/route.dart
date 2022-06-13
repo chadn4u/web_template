@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:web_template/feature/aruna_test/presentation/pages/detail/detail.dart';
-import 'package:web_template/feature/aruna_test/presentation/pages/detailPage.dart';
-import 'package:web_template/feature/aruna_test/presentation/pages/home/home.dart';
-import 'package:web_template/feature/aruna_test/presentation/pages/homePage.dart';
+import 'package:web_template/feature/web_app/presentation/pages/detail/detail.dart';
+import 'package:web_template/feature/web_app/presentation/pages/detailPage.dart';
+import 'package:web_template/feature/web_app/presentation/pages/home/home.dart';
+import 'package:web_template/feature/web_app/presentation/pages/homePage.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
@@ -24,7 +24,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   // print(settings.arguments);
   switch (settings.name) {
     case AppRoutes.HOMEROUTE:
-      return _getPageRoute(const Home(), settings);
+      return _getPageRoute(Home(), settings);
     case AppRoutes.DETAILROUTE:
       return _getPageRoute(
           Details(data: settings.arguments as Map<String, dynamic>), settings);
@@ -33,7 +33,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     // case EpisodeDetailsRoute:
     //   return _getPageRoute(EpisodeDetails(), settings);
     default:
-      return _getPageRoute(const Home(), settings);
+      return _getPageRoute(Home(), settings);
   }
 }
 

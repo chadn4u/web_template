@@ -1,9 +1,9 @@
-import 'package:web_template/feature/aruna_test/controller/homeController.dart';
+import 'package:web_template/feature/web_app/controller/homeController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:web_template/feature/aruna_test/presentation/widgets/appBar.dart';
-import 'package:web_template/feature/aruna_test/presentation/widgets/homeBody.dart';
-import 'package:web_template/feature/aruna_test/presentation/widgets/menu.dart';
+import 'package:web_template/feature/web_app/presentation/widgets/appBar.dart';
+import 'package:web_template/feature/web_app/presentation/widgets/homeBody.dart';
+import 'package:web_template/feature/web_app/presentation/widgets/menu.dart';
 import 'package:web_template/utils/const.dart';
 
 class HomePage extends GetResponsiveView<HomeController> {

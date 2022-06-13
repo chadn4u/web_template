@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:web_template/core/service/navigationService.dart';
-import 'package:web_template/feature/aruna_test/controller/homeController.dart';
-import 'package:web_template/feature/aruna_test/presentation/widgets/menu.dart';
+import 'package:web_template/feature/web_app/controller/homeController.dart';
+import 'package:web_template/feature/web_app/presentation/widgets/menu.dart';
 import 'package:web_template/route/route.dart';
+import 'package:web_template/utils/const.dart';
 
 import '../locator.dart';
 
@@ -14,7 +15,7 @@ class HomeBody extends GetResponsiveView<HomeController> {
       children: [
         Container(
           width: MediaQuery.of(Get.context!).size.width * 0.2,
-          color: Colors.grey.shade200,
+          color: backgroundColorMenu,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -22,7 +23,7 @@ class HomeBody extends GetResponsiveView<HomeController> {
                   padding: EdgeInsets.fromLTRB(24, 10, 0, 10),
                   child: Text('Menu',
                       style: TextStyle(
-                          color: Colors.green,
+                          color: mainColor,
                           fontSize: 18,
                           letterSpacing: 0.53,
                           fontFamily: 'Roboto-Bold'))),

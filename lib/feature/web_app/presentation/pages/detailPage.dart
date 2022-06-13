@@ -1,4 +1,4 @@
-import 'package:web_template/feature/aruna_test/model/posts.dart';
+import 'package:web_template/feature/web_app/model/posts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:web_template/base/baseController.dart';
 // import 'package:web_template/core/network/rest_client.dart';
-// import 'package:web_template/feature/aruna_test/model/posts.dart';
+// import 'package:web_template/feature/web_app/model/posts.dart';
 // import 'package:dio/dio.dart';
 // import 'package:flutter/material.dart';
 import 'package:get/get_rx/get_rx.dart';
 import 'package:web_template/core/service/navigationService.dart';
-import 'package:web_template/feature/aruna_test/presentation/locator.dart';
+import 'package:web_template/feature/web_app/presentation/locator.dart';
 
 class HomeController extends BaseController {
   var scaffoldKey = GlobalKey<ScaffoldState>();
