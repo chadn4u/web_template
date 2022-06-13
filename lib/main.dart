@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:web_template/core/service/navigationService.dart';
+import 'package:web_template/feature/aruna_test/presentation/locator.dart';
 import 'package:web_template/feature/aruna_test/presentation/pages/homePage.dart';
 
 import 'feature/aruna_test/presentation/binding.dart';
 
 void main() {
+  setupLocator();
   runApp(const MyApp());
 }
 
