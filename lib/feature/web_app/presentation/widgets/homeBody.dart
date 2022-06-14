@@ -27,7 +27,19 @@ class HomeBody extends GetResponsiveView<HomeController> {
                           fontSize: 18,
                           letterSpacing: 0.53,
                           fontFamily: 'Roboto-Bold'))),
-              Menu()
+              Menu(),
+              const Divider(
+                color: colorBlack,
+                thickness: 0.5,
+              ),
+              const Padding(
+                  padding: EdgeInsets.fromLTRB(24, 10, 0, 10),
+                  child: Text('V 1.0.0',
+                      style: TextStyle(
+                          color: mainColor,
+                          fontSize: fontSizeTitleAppBarSmall,
+                          letterSpacing: 0.53,
+                          fontFamily: 'Roboto-Bold'))),
             ],
           ),
         ),

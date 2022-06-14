@@ -154,18 +154,40 @@ class Menu extends GetResponsiveView<MenuController> {
     return Expanded(
       child: ListView.builder(
         itemBuilder: (context, index) =>
-            _getCategoryWidget(controller.controllerHome.data[index], context),
-        itemCount: controller.controllerHome.data.length,
+            _getCategoryWidget(controller.data[index], context),
+        itemCount: controller.data.length,
       ),
     );
   }
 
   @override
   Widget phone() {
-    return ListView.builder(
-      itemBuilder: (context, index) =>
-          _getCategoryWidget(controller.controllerHome.data[index], context),
-      itemCount: controller.controllerHome.data.length,
+    return Column(
+      children: [
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) =>
+                _getCategoryWidget(controller.data[index], context),
+            itemCount: controller.data.length,
+          ),
+        ),
+        const Divider(
+          color: colorBlack,
+          thickness: 0.5,
+        ),
+        const Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+              padding: EdgeInsets.fromLTRB(24, 10, 0, 10),
+              child: Text('V 1.0.0',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                      color: mainColor,
+                      fontSize: fontSizeTitleAppBarSmall,
+                      letterSpacing: 0.53,
+                      fontFamily: 'Roboto-Bold'))),
+        ),
+      ],
     );
   }
 }
