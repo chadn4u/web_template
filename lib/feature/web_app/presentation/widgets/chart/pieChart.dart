@@ -1,4 +1,4 @@
-import 'package:flutter/src/foundation/key.dart';
+// ignore: implementation_imports
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 

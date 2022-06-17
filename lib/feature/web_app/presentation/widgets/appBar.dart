@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:web_template/feature/web_app/controller/appBarController.dart';
@@ -25,7 +24,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
           )),
       elevation: 2.0,
       backgroundColor: backgroundColorAppBar,
-      title: const Text('Flutter UI Widgets',
+      title: const SelectableText('Flutter UI Widgets',
           style: TextStyle(
               fontSize: fontSizeTitleAppBar, fontFamily: 'HeeboMedium')),
       actions: <Widget>[
@@ -54,7 +53,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
             children: const [
               Padding(
                 padding: EdgeInsets.fromLTRB(24, 15, 0, 0),
-                child: Text('Template',
+                child: SelectableText('Template',
                     style: TextStyle(
                         color: colorBlack,
                         fontSize: fontSizeTitleAppBar,
@@ -97,7 +96,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
         //               },
         //               child: Padding(
         //                 padding: const EdgeInsets.fromLTRB(8, 9, 8, 9),
-        //                 child: Text('DOWNLOAD NOW',
+        //                 child: SelectableText('DOWNLOAD NOW',
         //                     style: TextStyle(
         //                         color: controller.isHoveringDownloadButton
         //                             ? colorHoveringButton
@@ -144,7 +143,7 @@ class AppBarHelper extends GetResponsiveView<AppBarController> {
         //                   //     fit: BoxFit.contain,
         //                   //     height: 33,
         //                   //     width: 33),
-        //                   Text('Get Packages',
+        //                   SelectableText('Get Packages',
         //                       style: TextStyle(
         //                           color: controller.isHoveringPubDevButton
         //                               ? Colors.red

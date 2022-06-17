@@ -7,6 +7,8 @@ import 'package:web_template/feature/web_app/presentation/widgets/menu.dart';
 import 'package:web_template/utils/const.dart';
 
 class HomePage extends GetResponsiveView<HomeController> {
+  HomePage({Key? key}) : super(key: key);
+
   @override
   Widget desktop() {
     // category = WidgetCategory.fromJson(data);

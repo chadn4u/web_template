@@ -10,17 +10,17 @@ class DetailPage extends StatelessWidget {
     final Posts data = Get.arguments['data'];
     return Scaffold(
         appBar: AppBar(
-          title: Text("Detail data"),
+          title: const SelectableText("Detail data"),
         ),
         body: Column(
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(data.title),
+              child: SelectableText(data.title),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(data.body),
+              child: SelectableText(data.body),
             ),
           ],
         ));

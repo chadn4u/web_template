@@ -20,7 +20,7 @@ class Menu extends GetResponsiveView<MenuController> {
             data: Theme.of(ctx).copyWith(dividerColor: Colors.transparent),
             child: ExpansionTile(
                 initiallyExpanded: true,
-                title: Text(data["title"],
+                title: SelectableText(data["title"],
                     style: const TextStyle(
                         color: Colors.black,
                         fontSize: 15,
@@ -41,10 +41,11 @@ class Menu extends GetResponsiveView<MenuController> {
                               onTap: () {
                                 controller.controllerHome.titleSelected.value =
                                     dataChild[index]["titleChild"];
-                                locator<NavigationService>()
-                                    .navigateTo(AppRoutes.DETAILROUTE, args: {
-                                  "data": dataChild[index]["titleChild"]
-                                });
+                                locator<NavigationService>().navigateTo(
+                                    dataChild[index]["route"],
+                                    args: {
+                                      "data": dataChild[index]["titleChild"]
+                                    });
 
                                 if (screen.isPhone) {
                                   if (controller.controllerHome.scaffoldKey
@@ -70,13 +71,14 @@ class Menu extends GetResponsiveView<MenuController> {
                                               ? mainColor
                                               : Colors.transparent,
                                           child: const Opacity(
-                                              opacity: 0.0, child: Text('1'))),
+                                              opacity: 0.0,
+                                              child: SelectableText('1'))),
                                       Expanded(
                                           child: Container(
                                         alignment: Alignment.centerLeft,
                                         padding: const EdgeInsets.fromLTRB(
                                             20, 10, 10, 10),
-                                        child: Text(
+                                        child: SelectableText(
                                             dataChild[index]["titleChild"],
                                             style: const TextStyle(
                                                 color: Colors.black,
@@ -103,8 +105,7 @@ class Menu extends GetResponsiveView<MenuController> {
                     locator<NavigationService>()
                         .navigateTo(AppRoutes.HOMEROUTE);
                   } else {
-                    locator<NavigationService>().navigateTo(
-                        AppRoutes.DETAILROUTE,
+                    locator<NavigationService>().navigateTo(data["route"],
                         args: {"data": data["title"]});
                   }
 
@@ -128,13 +129,13 @@ class Menu extends GetResponsiveView<MenuController> {
                                     data["title"]
                                 ? mainColor
                                 : Colors.transparent,
-                            child:
-                                const Opacity(opacity: 0.0, child: Text('1'))),
+                            child: const Opacity(
+                                opacity: 0.0, child: SelectableText('1'))),
                         Expanded(
                             child: Container(
                           alignment: Alignment.centerLeft,
                           padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                          child: Text(data["title"],
+                          child: SelectableText(data["title"],
                               style: const TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
@@ -179,7 +180,7 @@ class Menu extends GetResponsiveView<MenuController> {
           alignment: Alignment.centerLeft,
           child: Padding(
               padding: EdgeInsets.fromLTRB(24, 10, 0, 10),
-              child: Text('V 1.0.0',
+              child: SelectableText('V 1.0.0',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                       color: mainColor,

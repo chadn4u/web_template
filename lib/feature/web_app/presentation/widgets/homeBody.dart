@@ -9,6 +9,8 @@ import 'package:web_template/utils/const.dart';
 import '../locator.dart';
 
 class HomeBody extends GetResponsiveView<HomeController> {
+  HomeBody({Key? key}) : super(key: key);
+
   @override
   Widget desktop() {
     return Row(
@@ -21,7 +23,7 @@ class HomeBody extends GetResponsiveView<HomeController> {
             children: [
               const Padding(
                   padding: EdgeInsets.fromLTRB(24, 10, 0, 10),
-                  child: Text('Menu',
+                  child: SelectableText('Menu',
                       style: TextStyle(
                           color: mainColor,
                           fontSize: 18,
@@ -34,7 +36,7 @@ class HomeBody extends GetResponsiveView<HomeController> {
               ),
               const Padding(
                   padding: EdgeInsets.fromLTRB(24, 10, 0, 10),
-                  child: Text('V 1.0.0',
+                  child: SelectableText('V 1.0.0',
                       style: TextStyle(
                           color: mainColor,
                           fontSize: fontSizeTitleAppBarSmall,

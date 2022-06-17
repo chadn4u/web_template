@@ -12,17 +12,17 @@ class Details extends StatelessWidget {
     // late Map<String, dynamic> dataa = data;
     return Scaffold(
         // appBar: AppBar(
-        //   title: Text("Detail data"),
+        //   title: SelectableText("Detail data"),
         // ),
         body: Column(
       children: [
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(data["data"]),
+          child: SelectableText(data["data"]),
         ),
         const Padding(
           padding: EdgeInsets.all(8.0),
-          child: Text("uyee"),
+          child: SelectableText("uyee"),
         ),
       ],
     ));

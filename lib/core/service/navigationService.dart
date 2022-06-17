@@ -9,7 +9,7 @@ class NavigationService extends GetxService {
   }
 
   void goBack() {
-    print(navigatorKey.currentState);
+    // print(navigatorKey.currentState);
     return navigatorKey.currentState!.pop();
   }
 }

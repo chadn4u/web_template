@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:get/get.dart';
 import 'package:dio/dio.dart' as d;
 import 'dart:io';
@@ -28,7 +30,7 @@ class RestClient extends GetxService {
       // print('RESPONSE[${response.statusCode}] => DATA: ${response.data}');
       return handler.next(response);
     }, onError: (err, handler) {
-      print('ERROR[${err.response?.statusCode}]');
+      // print('ERROR[${err.response?.statusCode}]');
       return handler.next(err);
     }));
   }
